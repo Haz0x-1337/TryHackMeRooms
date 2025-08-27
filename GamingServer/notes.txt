@@ -1,0 +1,22 @@
+=================
+#HTTP
+=================
+- /secret endpoint contains an encrypted SSH key
+- Converted the Encrypted key into a format that JohnTheRipper can read.
+- Passphrase of the encrypted key is "letmein" 
+- Username NOT FOUND.
+- Robots.txt doesn't have any Disallow. Allow: /uploads/
+- Source code contains "john". Based on context, john is the dev.
+==========
+#FLAGS
+==========
+- user:a5c2ff8b9c2e3d4fe9d4ff2f1a5a6e7e
+- root:2e337b8c9f3aff0c2b3e8d4e6a7c88fc
+==========
+#PRIVESC
+==========
+- user have multiple unusual id's
+- password still NOT FOUND 
+- one of the groups is lxd and is a known attack vector for privesc
+- Created LXD container and mounted the root on it.
+- root access obtained

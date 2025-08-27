@@ -1,0 +1,36 @@
+e6722920bab2326f8217e4
+bf6b1b58ac
+ddJ1cc76ee3
+beb60709056cfbOW
+elcome to Valley Inc. Authentica
+[k0rHh
+ is your usernad
+Ol: /passwXd.{
+~{edJrong P= 
+sL_striF::_M_M
+v0ida%02xo
+~ c-74
+==========================
+k&L=
+libc.rtld.nns_
+sion.skip_lock_af
+ter_retrie
+shold__h
+MALLOC_TRIM
+HRESHOLD_
+turb
+PERTURB_
+cpu.x86_
+cache
+aggingmE
+enableu
+============================
+
+e6722920bab2326f8217e4bf6b1b58ac
+dd2921cc76ee3abfd2beb60709056cfb
+Welcome to Valley Inc. Authenticator
+What is your username: 
+What is your password: 
+Authenticated
+Wrong Password or Username
+

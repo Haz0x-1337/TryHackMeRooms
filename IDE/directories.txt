@@ -1,0 +1,12 @@
+/.hta                [33m (Status: 403)[0m [Size: 279]
+/.htpasswd           [33m (Status: 403)[0m [Size: 279]
+/.htaccess           [33m (Status: 403)[0m [Size: 279]
+/components          [36m (Status: 301)[0m [Size: 324][34m [--> http://10.201.8.72:62337/components/][0m
+/data                [36m (Status: 301)[0m [Size: 318][34m [--> http://10.201.8.72:62337/data/][0m
+/favicon.ico         [32m (Status: 200)[0m [Size: 1150]
+/index.php           [32m (Status: 200)[0m [Size: 5239]
+/js                  [36m (Status: 301)[0m [Size: 316][34m [--> http://10.201.8.72:62337/js/][0m
+/languages           [36m (Status: 301)[0m [Size: 323][34m [--> http://10.201.8.72:62337/languages/][0m
+/lib                 [36m (Status: 301)[0m [Size: 317][34m [--> http://10.201.8.72:62337/lib/][0m
+/server-status       [33m (Status: 403)[0m [Size: 279]
+/themes              [36m (Status: 301)[0m [Size: 320][34m [--> http://10.201.8.72:62337/themes/][0m

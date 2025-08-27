@@ -1,0 +1,57 @@
+/admin = NO PERMISSION
+/api = message directory but leads to "User not found" 
+
+#Cookie PHPSESSID created without the httponly flag
+#IDOR works on /api/messages/?uid= but it really does nothing. Only allows me 
+#see all converstaion they had which is useless anyways.... 
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0649 = Nothing Interesting
+found
+
+Managed to do a second order SQLi which allowed me to change the password of every
+user in the web app.
+
+Took advantage of Log Poisoning that allowed me to get a command injection
+interface via url with second order sql injection
+
+On the initial access to webserver, there is an exposed MYSQL log that contains 
+Roberto's login credentials. 
+Username:Roberto
+Password: yVnocsXsf%X68wf
+
+
+
+Once I got into Roberto's account, I ran linpeas which gave me a ROOT credentials:
+('DB_USERNAME', 'root');
+('DB_PASSWORD', 'password123');                       
+===== Root credentials not useful. Now used in SSH, only works for web database.
+Didn't find anything useful in the database aside from user credentials=====
+
+/bin/authenticate (Unknown SUID binary!)
+
+HINT: Some people only have one password...
+
+4 USERS IN THE SERVER
+wwbuddy
+roberto
+jenny
+root
+
+I got nowhere with these information. I remembered that their default passwords 
+are there birthdates.. I found a note that say jenny will turn 26 next week so I
+checked when was  the note created..
+
+Change: 2020-07-27 21:25:48.544379536 +0000
+
+So what i did is added one week and dminish the years by 26.. 
+Jenny's birthdate is 08/03/1994
+
+I GOT IN JENNY's web server access. 
+
+==============
+I ran /bin/authenticate using Jenny. It updated my gid and group id... the 
+question is....... WHYYYY????????
+
+I went back to ghidra where I reversed engineer the /bin/authenticate binary. 
+using jenny, I set the ENV variale user to ;bash -p and execute the binary. 
+
+Gave me root access

@@ -1,0 +1,29 @@
+ 236There is a broken image. 
+
+Downloaded it. Learned how to hexedit the header as it has a different header
+than the file extension. 
+
+found a hidden directory /th1s_1s_h1dd3n
+
+y2RPJ4QaPF!B = possible password 
+Passphrase for thm.jpg = steghide extract  
+
+
+wbxre username.
+
+hint :ROTten .... so i thought do a ROT13 on the username. And it says "joker" 
+ssh username = joker
+
+*axA&GF8dP = password 
+
+No subdirectories, Only port 80/22.
+
+There's a hidden section on the source page which includes "thm.jpg" that wouldn't
+open because of an error. 
+
+Downloaded the image using "curl". The header shows "PNG" instead of JPG. 
+Used a hexeditor to change the hex header to see if it fixes the image and it did. 
+
+"thm.jpg" showed a hidden directory that wasn't in the gobuster scan. 
+
+

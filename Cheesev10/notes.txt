@@ -1,0 +1,8 @@
+Login bypassed with SQL injection
+
+'||'1'='1';-- - = LOGIN QUERY
+ANY PASSWORD Bypassed the website login form.
+
+==========================
+
+Vulnerable to file inclusion

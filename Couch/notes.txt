@@ -1,0 +1,22 @@
+=================
+#PORT 5984 - HTTP
+=================
+- couchdb 1.6.1 dbms
+- vulnerable to metasploit for RCE but ignored because i can access atena thru SSH
+- _utils endpoint is web admin tool for couchdb 
+- i found atena:t4qfzcc4qN## === SSH LOGIN
+=======
+#FLAGS
+=======
+- user: THM{1ns3cure_couchdb}
+- root: THM{RCE_us1ng_Docker_API}
+==============
+#LINPEAS NOTES
+==============
+- /etc/profile.d/rvm.sh
+- tried runc but no SUID
+- Bash history shows that they create the file and put it on a docker. The exact 
+  command to access the docker is in the bash history. 
+- docker -H 127.0.0.1:2375 run --rm -it --privileged --net=host -v /:/mnt alpine
+- find / -name "root.txt" 2>/dev/null
+- flag located at /mnt/root/

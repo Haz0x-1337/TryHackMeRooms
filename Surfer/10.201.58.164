@@ -1,0 +1,4 @@
+# Nmap 7.95 scan initiated Mon Aug  4 13:41:08 2025 as: /usr/lib/nmap/nmap --privileged -sC -sV -oN 10.201.58.164 nmap.txt
+Failed to resolve "nmap.txt".
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Mon Aug  4 13:41:09 2025 -- 0 IP addresses (0 hosts up) scanned in 0.27 seconds

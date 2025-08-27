@@ -1,0 +1,17 @@
+===========
+#PORT 1337
+===========
+- Username: smokey
+- Password: vYQ5ngPpw8AdUmL
+- I figured these are ssh creds but they didn't work.
+- the input looks vulnerable to sqli but restricts sqli specific characters
+- ' sql commands ' 
+- Username: TryHackMeAdmin
+- password is the flag = THM{SQLit3_InJ3cTion_is_SimplE_nO?}
+- TryHackMeAdmin:mamZtAuMlrsEy5bp6q17,flag:THM{SQLit3_InJ3cTion_is_SimplE_nO?}
+==================
+#SQLi Commands
+==================
+- 'Union Select '
+- 'group_concat(column || column) - Useful if /*, is Filtered.
+

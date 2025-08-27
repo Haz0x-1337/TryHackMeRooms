@@ -1,0 +1,24 @@
+User: James
+Passphrase: James13
+
+===================
+
+User.txt === thm{65c1aaf000506e56996822c6281e6bf7}
+root.txt === thm{7f336f8c359dbac18d54fdd64ea753bb}
+
+===================
+In this room, attacker took advantage of a flawed login.js file where the SessionToken that is required to 
+access /admin. 
+
+Once successfully logged in, it displayed the id_rsa of james that is protected. Just used ssh2john and used 
+a wordlist to crack the passphrase needed.
+
+Added the necessary permissions to the id_rsa and access James thru SSH with the passphrase from John.
+
+For priv escalation, we took advantage of a cronjob. Hijacked where it pulls the script its running every minute.
+Replicate the path file similar to the cronjob. Put a revshell on the script calling back to attacker's IP. 
+
+Run a python server so the curl from ROOT can actually reach the attacker's machine. 
+Run a listener as well
+
+Done

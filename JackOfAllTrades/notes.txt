@@ -1,0 +1,43 @@
+Target IP: 10.201.15.94
+===============
+#HTTP
+===============
+- Weird enough, the http is on port 22
+- Can't access the site for some reason. I used curl to see the website content
+- /recovery.php endpoint is listed 
+- user: Jack
+---------------------------
+#Suspicious files
+- /assets/jackinthebox.jpg -- HONEYPOT
+- /assets/stego.jpg -- creds.txt but DEADEND
+- /assets/header.jpg -- cms.cred - jackinthebox:TplFxiSHjY
+--------------------------
+- There is a base64 encoded message which decodes to a password: u?WtKSraq
+- Since one of the images is called "Stego" a pictures of a dinosaur, i already assume that
+ the password is a passphrase for steghide extract. I got "creds.txt"
+- "creds.txt" is a honeypot. It looks the right image is jackinthebox.jpg but idk the
+passphrase for it
+- I checked out /recovery.php and it has another encoded message. Not base64 but since 
+it has = in the end. I assume it is a base-something encoded. Base32 is the only thing
+that did not return a gibberish value. It returns a hex data that seems like a rot13 
+cypher
+- ROT13 decodes to a hint: bit.ly/2TvYQ2S. It's just a dinosaur page but the real hint is
+that it says credentials are just hidden on the homepage
+- i got stuck for a moment and realized that i didn't tried the passphrase for the 
+header.jpg
+- page says get me a cmd and i'll run it for you
+- so i added /?cmd=whoami and it works, i'll put a revshell on it 
+==============
+#PrivEsc
+==============
+- www-data -> jack -> root
+- I can't access Jack's directory but there is a file owned by root. Jacks_password_list
+- I guess i just gotta run it with hydra to be jack
+- jack:ITMJpGGIqg1jn?>@ = Jack's SSH credentials
+- Took the user.jpg file to my attack machine and the file is in the image 
+- SUID strings. I set LFILE to /root/root.txt 
+===============
+#FLAGS
+===============
+- user: securi-tay2020_{p3ngu1n-hunt3r-3xtr40rd1n41r3}
+- root: securi-tay2020_{6f125d32f38fb8ff9e720d2dbce2210a}

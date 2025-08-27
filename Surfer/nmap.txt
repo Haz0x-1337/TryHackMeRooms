@@ -1,0 +1,24 @@
+# Nmap 7.95 scan initiated Mon Aug  4 13:41:20 2025 as: /usr/lib/nmap/nmap --privileged -sC -sV -oN nmap.txt 10.201.58.164
+Nmap scan report for 10.201.58.164
+Host is up (0.35s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 11:66:89:c6:cd:05:b9:93:ab:9c:d0:f3:47:a8:b0:51 (RSA)
+|   256 04:47:b1:f1:72:a9:6b:9d:cb:0c:6d:c7:3c:73:8a:7e (ECDSA)
+|_  256 2d:d9:3b:0d:4b:c0:b5:b2:ba:c4:9c:08:a0:53:6e:a5 (ED25519)
+80/tcp open  http    Apache httpd 2.4.38 ((Debian))
+| http-title: 24X7 System+
+|_Requested resource was /login.php
+|_http-server-header: Apache/2.4.38 (Debian)
+| http-robots.txt: 1 disallowed entry 
+|_/backup/chat.txt
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Aug  4 13:41:57 2025 -- 1 IP address (1 host up) scanned in 36.23 seconds

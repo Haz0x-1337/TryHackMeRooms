@@ -1,0 +1,3 @@
+user:lin
+password: RedDr4gonSynd1cat3
+locks = wordlist

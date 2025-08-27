@@ -1,0 +1,7 @@
+/.htpasswd           [33m (Status: 403)[0m [Size: 278]
+/.hta                [33m (Status: 403)[0m [Size: 278]
+/.htaccess           [33m (Status: 403)[0m [Size: 278]
+/assets              [36m (Status: 301)[0m [Size: 315][34m [--> http://cloudsite.thm/assets/][0m
+/index.html          [32m (Status: 200)[0m [Size: 18451]
+/javascript          [36m (Status: 301)[0m [Size: 319][34m [--> http://cloudsite.thm/javascript/][0m
+/server-status       [33m (Status: 403)[0m [Size: 278]

@@ -1,0 +1,23 @@
+/.hta                [33m (Status: 403)[0m [Size: 199]
+/.htpasswd           [33m (Status: 403)[0m [Size: 199]
+/.htaccess           [33m (Status: 403)[0m [Size: 199]
+/adm                 [36m (Status: 301)[0m [Size: 237][34m [--> http://10.201.10.63:8080/adm/][0m
+/assets              [36m (Status: 301)[0m [Size: 240][34m [--> http://10.201.10.63:8080/assets/][0m
+/bin                 [36m (Status: 301)[0m [Size: 237][34m [--> http://10.201.10.63:8080/bin/][0m
+/cache               [33m (Status: 403)[0m [Size: 199]
+/config              [33m (Status: 403)[0m [Size: 199]
+/docs                [36m (Status: 301)[0m [Size: 238][34m [--> http://10.201.10.63:8080/docs/][0m
+/download            [36m (Status: 301)[0m [Size: 242][34m [--> http://10.201.10.63:8080/download/][0m
+/ext                 [36m (Status: 301)[0m [Size: 237][34m [--> http://10.201.10.63:8080/ext/][0m
+/files               [33m (Status: 403)[0m [Size: 199]
+/feed                [32m (Status: 200)[0m [Size: 1462]
+/images              [36m (Status: 301)[0m [Size: 240][34m [--> http://10.201.10.63:8080/images/][0m
+/includes            [33m (Status: 403)[0m [Size: 199]
+/index.php           [32m (Status: 200)[0m [Size: 13105]
+/language            [36m (Status: 301)[0m [Size: 242][34m [--> http://10.201.10.63:8080/language/][0m
+/licenses            [36m (Status: 301)[0m [Size: 242][34m [--> http://10.201.10.63:8080/licenses/][0m
+/phpbb               [36m (Status: 301)[0m [Size: 239][34m [--> http://10.201.10.63:8080/phpbb/][0m
+/store               [33m (Status: 403)[0m [Size: 199]
+/styles              [36m (Status: 301)[0m [Size: 240][34m [--> http://10.201.10.63:8080/styles/][0m
+/vendor              [36m (Status: 301)[0m [Size: 240][34m [--> http://10.201.10.63:8080/vendor/][0m
+/web.config          [32m (Status: 200)[0m [Size: 1177]

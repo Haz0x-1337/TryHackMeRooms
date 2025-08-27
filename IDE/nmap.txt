@@ -1,0 +1,27 @@
+# Nmap 7.95 scan initiated Sat Aug  2 17:08:21 2025 as: /usr/lib/nmap/nmap --privileged -sC -sV -p- --min-rate 5000 -T4 -oN nmap.txt -Pn 10.201.25.23
+Warning: 10.201.25.23 giving up on port because retransmission cap hit (6).
+Nmap scan report for 10.201.25.23
+Host is up (0.36s latency).
+Not shown: 65524 closed tcp ports (reset)
+PORT      STATE    SERVICE     VERSION
+21/tcp    open     ftp         vsftpd 3.0.3
+22/tcp    open     ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e2:be:d3:3c:e8:76:81:ef:47:7e:d0:43:d4:28:14:28 (RSA)
+|   256 a8:82:e9:61:e4:bb:61:af:9f:3a:19:3b:64:bc:de:87 (ECDSA)
+|_  256 24:46:75:a7:63:39:b6:3c:e9:f1:fc:a4:13:51:63:20 (ED25519)
+80/tcp    open     http        Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+369/tcp   filtered rpc2portmap
+17923/tcp filtered unknown
+20876/tcp filtered unknown
+29526/tcp filtered unknown
+31915/tcp filtered unknown
+56823/tcp filtered unknown
+62337/tcp open     http        Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Codiad 2.8.4
+64367/tcp filtered unknown
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug  2 17:09:11 2025 -- 1 IP address (1 host up) scanned in 49.64 seconds

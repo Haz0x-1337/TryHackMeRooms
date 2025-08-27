@@ -1,0 +1,5 @@
+Use RCE from metasploit SPIP_RCE_FORM
+
+
+User = think 
+Think has an exposed ssh key. Used it to login to the server through ssh

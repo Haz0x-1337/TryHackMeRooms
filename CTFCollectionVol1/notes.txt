@@ -1,0 +1,56 @@
+========
+#Task2
+========
+- base64 decode = THM{ju57_d3c0d3_7h3_b453} 
+========
+#Task3
+========
+- Stegonography = THM{3x1f_0r_3x17}
+========
+#Task4
+========
+- Stegonography => Steegsike = THM{500n3r_0r_l473r_17_15_0ur_7urn}
+========
+#Task5
+========
+- Just highlight the text block = THM{wh173_fl46}
+========
+#Task6
+========
+- Stegonography => zbar-tools = THM{qr_m4k3_l1f3_345y}
+========
+#Task7 
+========
+- Reverse Engineering = THM{345y_f1nd_345y_60}
+========
+#Task8
+========
+- Decoding => Base58 = THM{17_h45_l3553r_l3773r5}
+========
+#Task9
+========
+- Decoding => ROT7 = THM{hail_the_caesar}
+========
+#Task10
+========
+- HTML Page-Source = THM{4lw4y5_ch3ck_7h3_c0m3mn7}
+========
+#Task11
+========
+- PNG Broken, Metadata header is wrong. Fixed it with hex edit = THM{y35_w3_c4n}
+========
+#Task12
+========
+- Reddit Socials = THM{50c14l_4cc0un7_15_p4r7_0f_051n7}
+========
+#Task13
+========
+- decode BinaryFuck = THM{0h_my_h34d}
+========
+#Task14
+========
+- S1 ^ S2 = THM{3xclu51v3_0r}
+========
+#Task15
+========
+- Stego => Binwalk -e = THM{y0u_w4lk_m3_0u7}

@@ -1,0 +1,38 @@
+============
+#HTTPS
+============
+- phpBB 
+==========
+#FTP
+==========
+- FTP is filtered.
+TODO:
+- Do Port Knocking -> So far, no luck
+- Will try to do another vector 
+- Cat forum displays the knock sequence:
+Knock knock! Magic numbers: 1111, 2222, 3333, 4444
+- Port opened and vulnerable to anonymous login
+- Contains a "note.txt". Inside if a password for a port 4420
+===================
+#4420 NVM-express
+===================
+- Managed to connect but it gave me a dumb shell
+- tried to run a rev shell to my attack machine using mkfifo piping
+- gave me a shell. 
+- There is a run me script but it requires a password
+- Upon checking the actual script with cat. It shows me the password entered
+and the directory where the SSH private key is generated
+==========
+#FLAGS
+=========
+- flag : 7cf90a0e7c5d25f1a827d3efe6fe4d0edd63cca9
+- root : 4a98e43d78bab283938a06f38d2ca3a3c53f0476
+===========
+#PRIVESC
+===========
+- After i logged in as "catlover", it gave a shell where it says im root but the
+thing is the root.txt flag is not there.
+- I saw the bash history and it looks like the root user made a cronjob.
+- I could edit the cronjob so even if its says im root. 
+- Put a revshell on it and it worked. 
+- Asked chatgpt what was that about, most likely a docker

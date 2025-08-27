@@ -1,0 +1,13 @@
+TARGET IP: 10.201.106.53
+=============
+#FREESWITCH
+=============
+- Vulnerabilities on ExploitDB
+- Vulnerable to (scanner/misc/freeswitch_event_socket_login)
+- Created a shell.exe payload with msfvenom
+- Found the text exploit that let's me access the Windows machine remotely. For whatever reason, 
+I could not execute the shell
+- I used module (exploit/multi/misc/freeswitch_event_socket_cmd_exec) 
+- Got initial access on the Windows Machine
+#TODO
+- Study more about Active Directory

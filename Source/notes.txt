@@ -1,0 +1,17 @@
+===================
+#PORT 10000 - HTTP
+===================
+- MiniServ 1.890 is running (Webmin Httpd)
+- Room says you have to take advantage of the most recent vulnerability
+- Upon checking exploitDB, the most recent one is username enumeration of webmin
+but it didn't work
+- went back to metasploit and found an exploit that doesn't require webmin user &
+password
+- module linux/http/webmin_backdoor
+- Got ROOT access instantly 
+===========
+#FLAGS
+===========
+- user: THM{SUPPLY_CHAIN_COMPROMISE}
+- root: THM{UPDATE_YOUR_INSTALL}
+

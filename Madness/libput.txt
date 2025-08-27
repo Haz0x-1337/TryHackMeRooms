@@ -1,0 +1,17 @@
+=======UNKNOWN SUID=============
+-rwsr-xr-x 1 root root 1.6M Jan  4  2020 /bin/screen-4.5.0 (Unknown SUID binary!)
+-rwsr-xr-x 1 root root 1.6M Jan  4  2020 /bin/screen-4.5.0.old (Unknown SUID binar
+===============================
+
+sudo -l for joker = No result
+
+root     23605  0.0  0.2  20796  2740 ?        Ss   05:51   0:00 SCREEN-4.5.0
+joker    23606  0.0  0.4  22188  4712 pts/2    Ss+  05:51   0:00  _ /bin/bash
+joker    23635  0.0  0.4  22188  4616 pts/4    Ss+  05:57   0:00  _ /bin/bash
+joker    23648  0.0  0.4  22188  4576 pts/5    Ss+  05:57   0:00  _ /bin/bash
+joker    23661  0.0  0.4  22188  4780 pts/6    Ss+  05:57   0:00  _ /bin/bash
+joker    23676  0.0  0.4  22188  4848 pts/7    Ss   05:57   0:00  _ /bin/bash
+joker    23812  0.0  0.2  20664  2784 pts/7    S+   06:05   0:00      _ screen -x -S 23621.pts-0
+root     23621  0.0  0.2  20796  2544 ?        Ss   05:55   0:00 SCREEN
+joker    23622  0.0  0.4  22300  5016 pts/3    Ss   05:55   0:00  _ /bin/bash
+joker    23805 

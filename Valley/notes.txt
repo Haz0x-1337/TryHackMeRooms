@@ -1,0 +1,72 @@
+Target IP: 10.201.42.201
+========
+#FTP
+========
+- Doesn't accept anonymous login
+- There is a clue where it says "Stop resuing credentials".
+- I tried siemDev's credentials on ftp and it works. 
+- We have 3 files inside FTP and it looks like packet logs
+- The 3rd PacketLog contains unencrypted valleyDev Credentials. 
+- valleyDev:ph0t0s1234, Tried logging in on the /dev but its not working. It worked on SSH	
+========
+#HTTP
+========
+- Found a note on pricing/ endpoint
+- Potential Username: J, RP
+- Fuzzing to all the initial endpoints...
+- FUZZ on static showed a 00 file that was not on the gallery pictures
+dev notes from valleyDev:
+--------------------------
+-add wedding photo examples
+-redo the editing on #4
+-remove /dev1243224123123
+-check for SIEM alerts
+--------------------------
+- site/dev1243224123123 - was a login page
+- The page loads a javascript file "dev.js" that shows interesting information 
+
+    if (username === "siemDev" && password === "california") {
+        window.location.href = "/dev1243224123123/devNotes37370.txt";
+    } else {
+
+- /devNotes37370.txt
+--------------------------------
+dev notes for ftp server:
+-stop reusing credentials
+-check for any vulnerabilies
+-stay up to date on patching
+-change ftp port to normal port
+--------------------------------
+==========
+#LINPEAS
+==========
+- 1  *    * * *   root    python3 /photos/script/photosEncrypt.py
+- valley -> siemDev -> valleyDev -> Root
+===========
+#PrivEsc
+===========
+- There is cronjob that runs a python file which encrypts image data and saves it to /photos/scripts
+- the images are writable by "valley" so I figured i have to escalate from 
+valleyDev -> siemDev -> valley
+- I tried logging in to siemDev using the credentials i found on the dev.js file
+- Found out that valley is included gid(valleyAdmin)
+- Similar to the Dreaming room. The vector i used for PrivEsc was writing on a imported pylib. 
+- In this case "Base64.py", I can't write on it as "valleyDev" so I need to find a way to
+escalate to a user that has a gid(1003)(valleyAdmin) which is user "valley"
+- valley has a file called valleyAuthenticator that asks for username and password
+- I downloaded the file to my attack machine by using http.server
+- I couldn't find anything significant on the strings. 
+- I saw the valleyAuthenticator pack with UPX. Unpacked the script.
+- After Unpacking, I browsed through the strings again and saw 2 hashes.
+- e6722920bab2326f8217e4bf6b1b58ac = liberty123
+- dd2921cc76ee3abfd2beb60709056cfb = valley
+- Now, I'm user "valley" I can proceed with the PrivEsc to fully hack this machine.
+- Edited the base64.py lib with a rev shell so I can have Root Access
+- Now I just have to wait for a minute to have Root
+- FUCK YES
+===============
+#FLAGS
+===============
+- user: THM{k@l1_1n_th3_v@lley}
+- root: THM{v@lley_0f_th3_sh@d0w_0f_pr1v3sc}
+

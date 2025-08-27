@@ -1,0 +1,23 @@
+Wordpress users:
+-bjoel
+-kwheel
+
+Passwords Found: 
+kwheel = cutiepie1
+
+Wordpress 5.0 vulnerable to wp_crop_rce (METASPLOIT MODULE)
+
+Initial Foothold: 
+user.txt was a fake flag. 
+
+DB_PASSWORD = LittleYellowLamp90!@
+DB_USER = wordpressuser
+
+bjoel = $P$BjoFHe8zIyjnQe/CBvaltzzC6ckPcO/ == NO MATCH FOUND
+kwheel = $P$BedNwvQ29vr1TPd80CDl6WnHyjr8te. === most likely "cutiepie1"
+
+
+Unknown SGID = usb/sbin/checker 
+Used Ghidra to check what's going on the binary. 
+
+created an env variable that says admin is true in order to run the checker binary. = priv escalation

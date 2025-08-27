@@ -1,0 +1,11 @@
+# Nmap 7.95 scan initiated Sat Aug 23 12:12:32 2025 as: /usr/lib/nmap/nmap -sV -p- --min-rate 5000 -T4 -Pn -oN nmap.txt 10.201.90.42
+Nmap scan report for 10.201.90.42
+Host is up (0.33s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+10000/tcp open  http    MiniServ 1.890 (Webmin httpd)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 23 12:13:25 2025 -- 1 IP address (1 host up) scanned in 53.19 seconds

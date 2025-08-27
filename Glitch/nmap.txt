@@ -1,0 +1,12 @@
+# Nmap 7.95 scan initiated Fri Aug  1 21:27:36 2025 as: /usr/lib/nmap/nmap --privileged -sC -sV -oN nmap.txt 10.201.119.100
+Nmap scan report for 10.201.119.100
+Host is up (0.35s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx 1.14.0 (Ubuntu)
+|_http-title: not allowed
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Aug  1 21:28:13 2025 -- 1 IP address (1 host up) scanned in 36.82 seconds

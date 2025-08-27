@@ -1,0 +1,4 @@
+/Login               [33m (Status: 405)[0m [Size: 36]
+/docs                [33m (Status: 403)[0m [Size: 27]
+/login               [33m (Status: 405)[0m [Size: 36]
+/register            [33m (Status: 405)[0m [Size: 36]

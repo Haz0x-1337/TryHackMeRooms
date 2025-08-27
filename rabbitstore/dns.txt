@@ -1,0 +1,2 @@
+FUZZ,url,redirectlocation,position,status_code,content_length,content_words,content_lines,content_type,duration,resultfile,Ffufhash
+storage,http://10.201.60.82,,479,200,9039,3183,263,text/html,416.604132ms,,683ac1df

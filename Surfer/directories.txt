@@ -1,0 +1,10 @@
+/.hta                [33m (Status: 403)[0m [Size: 278]
+/.htpasswd           [33m (Status: 403)[0m [Size: 278]
+/.htaccess           [33m (Status: 403)[0m [Size: 278]
+/assets              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.201.58.164/assets/][0m
+/backup              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.201.58.164/backup/][0m
+/index.php           [36m (Status: 302)[0m [Size: 0][34m [--> /login.php][0m
+/internal            [36m (Status: 301)[0m [Size: 317][34m [--> http://10.201.58.164/internal/][0m
+/robots.txt          [32m (Status: 200)[0m [Size: 40]
+/server-status       [33m (Status: 403)[0m [Size: 278]
+/vendor              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.201.58.164/vendor/][0m

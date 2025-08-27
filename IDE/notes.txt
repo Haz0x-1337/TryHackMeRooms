@@ -1,0 +1,15 @@
+website = john:password
+
+RCE from exploit db on codiad
+
+drac:Th3dRaCULa1sR3aL
+user.txt = 02930d21a8eb009f6d26361b2d24a466
+
+sudo -l runs vsftpd.conf
+
+secure_chroot_dir=/var/run/vsftpd/empty
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+
+/lib/systemd/systems/vsftpd.service
+

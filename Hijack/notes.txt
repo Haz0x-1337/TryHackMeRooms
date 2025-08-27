@@ -1,0 +1,69 @@
+TARGET IP: 10.201.72.222
+=========
+#FTP
+=========
+- FTP Service doesn't take anonymous login
+- Has 2 files inside FTP. ".from_admin.txt" & ".passwords_list.txt"
+- 1st file says that all their password is in the password_list.txt
+=========
+#NFS
+=========
+- There is a mounted file system on NFS service. "/mnt/share"
+- Attached the mounted share to my own attack machine but it requires special
+permission
+- Created a user that has 1003 as uid and gid. 
+- Found a file "for_employees.txt" 
+- File contains FTP credentials ===  ftpuser:W3stV1rg1n14M0un741nM4m4
+=========
+#HTTP
+=========
+- usernames: admin, rick
+- login for has a timeout
+- tried using hydra but it has 2 different Fail message
+- their web app has a sign up page
+- It creates a PHP session id that's encoded in Base64
+- base64 decode is basically haz0x:md5hash
+- With the password list, i'm going to try access the "administration" endpoint
+using burp with special processing. Switching the passwords with md5 hash, putting
+admin: infront, then encoding the whole thing with base64
+- Using the logic I implemented, I managed to get the right Cookie session and
+managed to access the "administration" panel.
+- ADMIN COOKIE SESSION === YWRtaW46ZDY1NzNlZDczOWFlN2ZkZmIzY2VkMTk3ZDk0ODIwYTU%3d
+- Using my created account, i changed the cookie session. 
+- The admin panel has a input box that accept arbitary commands as long as u
+prefix it with a "&" 
+- i saw a .sh file that is writable by www-data so I edit it with my revshell
+to get access to the webserver
+===============
+#LINPEAS NOTES
+===============
+EXECUTABLE:
+-/etc/rc.local.vmimport
+------------------
+- /var/www/html/config.php:$password = "N3v3rG0nn4G1v3Y0uUp"; 
+- wwwdata -> rick -> root 
+$username = "rick";
+$password = "N3v3rG0nn4G1v3Y0uUp";
+$dbname = "hijack";
+===============
+#FLAGS
+===============
+user = THM{fdc8cd4cff2c19e0d1022e78481ddf36}
+root = THM{b91ea3e8285157eaf173d88d0a73ed5a}
+
+==============
+#SUDO -l
+==============
+Matching Defaults entries for rick on Hijack:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin,
+    env_keep+=LD_LIBRARY_PATH
+
+User rick may run the following commands on Hijack:
+    (root) /usr/sbin/apache2 -f /etc/apache2/apache2.conf -d /etc/apache2
+=======================
+#PRIVILEGE ESCALATTION
+=======================
+- Based on sudo -l, we will hijack Apache Library
+- I used chatgpt to make a malicious .c file that will give me a shell once
+ ran as a library which will give me access to ROOT

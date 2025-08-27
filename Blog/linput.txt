@@ -1,0 +1,10 @@
+'DB_PASSWORD', 'LittleYellowLamp90!@'
+'DB_USER', 'wordpressuser'
+
+
+======================================
+/usr/sbin/checker (Unknown SGID binary)
+======================================
+Running the binary results to "Not an admin" 
+
+

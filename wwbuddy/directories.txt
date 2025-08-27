@@ -1,0 +1,14 @@
+/.htaccess           [33m (Status: 403)[0m [Size: 278]
+/.hta                [33m (Status: 403)[0m [Size: 278]
+/.htpasswd           [33m (Status: 403)[0m [Size: 278]
+/admin               [36m (Status: 301)[0m [Size: 314][34m [--> http://10.201.59.161/admin/][0m
+/api                 [36m (Status: 301)[0m [Size: 312][34m [--> http://10.201.59.161/api/][0m
+/change              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.201.59.161/change/][0m
+/images              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.201.59.161/images/][0m
+/index.php           [36m (Status: 302)[0m [Size: 7740][34m [--> /login][0m
+/js                  [36m (Status: 301)[0m [Size: 311][34m [--> http://10.201.59.161/js/][0m
+/login               [36m (Status: 301)[0m [Size: 314][34m [--> http://10.201.59.161/login/][0m
+/profile             [36m (Status: 301)[0m [Size: 316][34m [--> http://10.201.59.161/profile/][0m
+/register            [36m (Status: 301)[0m [Size: 317][34m [--> http://10.201.59.161/register/][0m
+/server-status       [33m (Status: 403)[0m [Size: 278]
+/styles              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.201.59.161/styles/][0m

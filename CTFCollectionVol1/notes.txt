@@ -54,3 +54,7 @@
 #Task15
 ========
 - Stego => Binwalk -e = THM{y0u_w4lk_m3_0u7}
+========
+#Task16
+========
+

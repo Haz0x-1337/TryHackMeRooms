@@ -5,4 +5,10 @@
 - Secret word on robots.txt: Wubbalubbadubdub
 - Since we have an image file called "Portal.jpg", I tried to check for similar php
 endpoints and we have portal.php.
-- 
+- Command injection
+==========
+#FLAGS
+==========
+- mr. meeseek hair
+- 1 jerry tear
+- fleeb juice

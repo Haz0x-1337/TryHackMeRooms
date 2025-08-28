@@ -57,24 +57,4 @@
 ========
 #Task16
 ========
-- Stego => StegSolve = THM{7h3r3_15_h0p3_7h3_d4rkn355}
-========
-#Task17
-========
-- QR => zbarimg => soundsloud = THM{SOUNDINGQR}
-========
-#Task18
-========
-- Wayback Machine => THM{ch3ck_th3_h4ckb4ck}
-========
-#Task19
-========
-- Veginere Cipher = TRYHACKME{YOU_FOUND_THE_KEY}
-========
-#Task20
-========
-- Decoding => 10 => 16 => ASCII = THM{17_ju57_4n_0rd1n4ry_b4535}
-========
-#Task21
-=======
-- Wireshark Packets => export objects => save flag.txt = THM{d0_n07_574lk_m3}
+- 

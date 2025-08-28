@@ -1,0 +1,8 @@
+==========
+#HTTP
+==========
+- Page Source contains Username: R1ckRul3s
+- Secret word on robots.txt: Wubbalubbadubdub
+- Since we have an image file called "Portal.jpg", I tried to check for similar php
+endpoints and we have portal.php.
+- 

@@ -1,0 +1,11 @@
+=========
+#HTTP
+=========
+=========
+#SMB
+=========
+- null sessions are allowed with no user and no password
+- logged in on rpcclient as anonymous
+- windows 7
+- Domain: WORKGROUP
+

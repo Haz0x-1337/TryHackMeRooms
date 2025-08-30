@@ -14,4 +14,14 @@ and running it.
 - Has a file called "note.txt"
 - Potential users: Anurodh, Apaar
 - nothing important 
+=========
+#Linpeas
+=========
+- apaar => aurick => anurodh
+- executable in containerd found in /opt
 
+=========
+#PrivEsc
+=========
+- I found "Files" located in /var/www/, there's an image. It looks like Stego.
+- hacker.jpg has a backup.zip that is password protected 

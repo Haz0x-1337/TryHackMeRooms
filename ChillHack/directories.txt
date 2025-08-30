@@ -1,0 +1,14 @@
+/.hta                [33m (Status: 403)[0m [Size: 274]
+/.hta.php            [33m (Status: 403)[0m [Size: 274]
+/.htaccess.php       [33m (Status: 403)[0m [Size: 274]
+/.htaccess           [33m (Status: 403)[0m [Size: 274]
+/.htpasswd           [33m (Status: 403)[0m [Size: 274]
+/.htpasswd.php       [33m (Status: 403)[0m [Size: 274]
+/contact.php         [32m (Status: 200)[0m [Size: 0]
+/css                 [36m (Status: 301)[0m [Size: 304][34m [--> http://chillhack/css/][0m
+/fonts               [36m (Status: 301)[0m [Size: 306][34m [--> http://chillhack/fonts/][0m
+/images              [36m (Status: 301)[0m [Size: 307][34m [--> http://chillhack/images/][0m
+/index.html          [32m (Status: 200)[0m [Size: 35184]
+/js                  [36m (Status: 301)[0m [Size: 303][34m [--> http://chillhack/js/][0m
+/secret              [36m (Status: 301)[0m [Size: 307][34m [--> http://chillhack/secret/][0m
+/server-status       [33m (Status: 403)[0m [Size: 274]

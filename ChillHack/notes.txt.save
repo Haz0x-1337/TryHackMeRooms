@@ -1,0 +1,12 @@
+=========
+#HTTP
+=========
+- /secret contains a command input box that executes arbitrary commands for the web server.
+But only displays id. If you do cli commands, it says are you a hacker?
+- Sudo -l says I can run apaar : ALL) NOPASSWD: /home/apaar/.helpline.sh AS www-data
+- tried to echo a revshell on it, didn't work. there's a filter 
+=========
+#FTP
+=========
+- Has a file called "note.txt"
+- Potential users: Anurodh, Apaar

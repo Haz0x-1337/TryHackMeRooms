@@ -25,3 +25,5 @@ and running it.
 =========
 - I found "Files" located in /var/www/, there's an image. It looks like Stego.
 - hacker.jpg has a backup.zip that is password protected 
+- index.php includes root:!@m+her00+@db
+- port forwarding
